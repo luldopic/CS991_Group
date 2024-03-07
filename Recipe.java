@@ -25,7 +25,11 @@ public class Recipe {
         Preptime
         Instructions
         Ingredients
-     Get total calories
-     Get tota
+     Get total nutrional value
+        calories
+        sugar
+        carbs
+        fat
+        salts
      */
 }

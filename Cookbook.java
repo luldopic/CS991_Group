@@ -6,5 +6,7 @@ public class Cookbook {
     //Methods
     /*
     Add Recipe
+    Get name
+    Change name
      */
 }
