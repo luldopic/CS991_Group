@@ -8,23 +8,17 @@ public class Recipe {
     private int cookTime;
 
     /**
-     * Creates a new fully filled-out recipe.
-     *
-     * @param name              name of recipe
-     * @param ingredientList    list of ingredients in recipe
-     * @param instruction       instructions for recipe
-     * @param prepTime          time recipe takes to prep
-     * @param cookTime          time recipe takes to cook once prepped
+     * Creates a blank recipe with a default name.
+     * Used for creating new recipes.
      */
-    public Recipe(String name, HashMap<Ingredient, Integer> ingredientList,
-                  String instruction, int prepTime, int cookTime)
+    public Recipe()
     {
         id = generateId();
-        this.name = name;
-        this.ingredientList = ingredientList;
-        this.instruction = instruction;
-        this.prepTime = prepTime;
-        this.cookTime = cookTime;
+        name = "New recipe";
+        ingredientList = new HashMap<>();   // double check that this works
+        instruction = "";
+        prepTime = 0;
+        cookTime = 0;
     }
 
     /**
@@ -40,20 +34,6 @@ public class Recipe {
         this.instruction = original.instruction;
         this.prepTime = original.prepTime;
         this.cookTime = original.cookTime;
-    }
-
-    /**
-     * Creates a blank recipe with a default name.
-     * Used for creating new recipes.
-     */
-    public Recipe()
-    {
-        id = generateId();
-        name = "New recipe";
-        ingredientList = new HashMap<>();   // double check that this works
-        instruction = "";
-        prepTime = 0;
-        cookTime = 0;
     }
 
     public String getId() {
