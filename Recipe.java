@@ -59,10 +59,6 @@ public class Recipe {
         return ingredientList;
     }
 
-    public void setIngredientList(HashMap<Ingredient, Integer> ingredientList) {
-        this.ingredientList = ingredientList;
-    }
-
     public String getInstruction() {
         return instruction;
     }
@@ -85,6 +81,18 @@ public class Recipe {
 
     public void setPrepTime(int prepTime) {
         this.prepTime = prepTime;
+    }
+
+    public void addIngredient(Ingredient ingredient, int grams) {
+        if (ingredient == null) {
+            throw new IllegalArgumentException("Ingredient to add was null");
+        }
+        if (grams <= 0) {
+            throw new IllegalArgumentException("Grams value must be number above 0");
+        }
+        ingredientList.put(ingredient, grams);
+        // Note that hashmap does not allow duplicate keys
+        // So if ingredient already exists in the list, the grams value will change
     }
 
     // Methods
