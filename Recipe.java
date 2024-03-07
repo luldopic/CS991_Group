@@ -4,24 +4,56 @@ public class Recipe {
     private String name;
     private HashMap<Ingredient, Integer> ingredientList;
     private String instruction;
-    private int cookTime;
     private int prepTime;
+    private int cookTime;
 
+    /**
+     * Creates a new fully filled-out recipe.
+     *
+     * @param name              name of recipe
+     * @param ingredientList    list of ingredients in recipe
+     * @param instruction       instructions for recipe
+     * @param prepTime          time recipe takes to prep
+     * @param cookTime          time recipe takes to cook once prepped
+     */
     public Recipe(String name, HashMap<Ingredient, Integer> ingredientList,
-                  String instruction, int cookTime, int prepTime)
+                  String instruction, int prepTime, int cookTime)
     {
         id = generateId();
         this.name = name;
         this.ingredientList = ingredientList;
         this.instruction = instruction;
-        this.cookTime = cookTime;
         this.prepTime = prepTime;
+        this.cookTime = cookTime;
     }
 
-    public Recipe (String name)
+    /**
+     * Creates a copy of an existing recipe.
+     * Generates a new unique ID for the copy recipe.
+     *
+     * @param original  original recipe to copy from
+     */
+    public Recipe(Recipe original) {
+        id = generateId();
+        this.name = original.name;
+        this.ingredientList = original.ingredientList;
+        this.instruction = original.instruction;
+        this.prepTime = original.prepTime;
+        this.cookTime = original.cookTime;
+    }
+
+    /**
+     * Creates a blank recipe with a default name.
+     * Used for creating new recipes.
+     */
+    public Recipe()
     {
         id = generateId();
-        this.name = name;
+        name = "New recipe";
+        ingredientList = new HashMap<>();   // double check that this works
+        instruction = "";
+        prepTime = 0;
+        cookTime = 0;
     }
 
     public String getId() {
