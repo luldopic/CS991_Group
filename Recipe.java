@@ -83,6 +83,13 @@ public class Recipe {
         this.prepTime = prepTime;
     }
 
+    /**
+     * Adds an ingredient to the recipe's ingredient list along with ingredient weight in grams.
+     * If the ingredient already exists in the list, the value for weight will be overwritten.
+     *
+     * @param ingredient    ingredient to be added to recipe's ingredient list
+     * @param grams         weight in grams for ingredient within this recipe
+     */
     public void addIngredient(Ingredient ingredient, int grams) {
         if (ingredient == null) {
             throw new IllegalArgumentException("Ingredient to add was null");
