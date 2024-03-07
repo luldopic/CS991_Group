@@ -1,10 +1,9 @@
 import java.util.HashMap;
 import java.util.Date;
 public class Recipe {
-    String id;
-    String name;
-    HashMap<Ingredient, Integer> ingredientList;
-    String instruction;
-    int cookTime;
-
+    private String id;
+    private String name;
+    private HashMap<Ingredient, Integer> ingredientList;
+    private String instruction;
+    private int cookTime;
 }
