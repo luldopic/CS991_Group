@@ -1,11 +1,7 @@
 import java.util.ArrayList;
 public class Cookbook {
+    private ArrayList<Recipe> RecipeList
 
 
 
-    public Recipe getRecipeByName(String name) {
-
-    }
-
-    public
 }
