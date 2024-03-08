@@ -123,6 +123,10 @@ public class Recipe {
         return total;
     }
 
+    public int totalTime() {
+        return prepTime + cookTime;
+    }
+
     // Methods
 
     /*
