@@ -1,8 +1,8 @@
 import java.util.HashMap;
 public class Recipe {
-    private String id;
+    private final String id;
     private String name;
-    private HashMap<Ingredient, Integer> ingredientList;
+    private final HashMap<Ingredient, Integer> ingredientList;
     private String instruction;
     private int prepTime;
     private int cookTime;
