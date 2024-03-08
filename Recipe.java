@@ -74,6 +74,9 @@ public class Recipe {
     }
 
     public void setCookTime(int cookTime) {
+        if (cookTime < 0) {
+            throw new IllegalArgumentException("Time to cook cannot be below 0");
+        }
         this.cookTime = cookTime;
     }
 
@@ -82,6 +85,9 @@ public class Recipe {
     }
 
     public void setPrepTime(int prepTime) {
+        if (prepTime < 0) {
+            throw new IllegalArgumentException("Time to prep cannot be below 0");
+        }
         this.prepTime = prepTime;
     }
 
