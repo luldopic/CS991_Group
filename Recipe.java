@@ -102,6 +102,13 @@ public class Recipe {
         // So if ingredient already exists in the list, the grams value will change
     }
 
+    public int totalCalories() {
+        if (ingredientList.isEmpty()) {
+            return 0;
+        }
+        // TODO write for each look for ingredientList hashmap here
+    }
+
     // Methods
 
     /*
