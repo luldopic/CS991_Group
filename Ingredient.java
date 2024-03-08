@@ -1,5 +1,4 @@
 public class Ingredient {
-    private String id;
     private String name;
     private String type;
     private int calories;

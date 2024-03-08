@@ -8,5 +8,10 @@ public class Cookbook {
     Add Recipe
     Get name
     Change name
+    Search by
      */
+
+    public String getName() {
+        return name;
+    }
 }
