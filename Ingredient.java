@@ -2,7 +2,7 @@ public class Ingredient {
     private String id;
     private String name;
     private String type;    // e.g. meat, fish, veg, fruit, grain, dairy?
-    private int calories;
+    private int calories;   // calories per gram of ingredient
     // Could include other nutritional info:
     /*
     private int protein;

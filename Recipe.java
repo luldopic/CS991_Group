@@ -1,8 +1,10 @@
 import java.util.HashMap;
+import java.util.Map.Entry;
+
 public class Recipe {
     private final String id;
     private String name;
-    private final HashMap<Ingredient, Integer> ingredientList;
+    private final HashMap<Ingredient, Integer> ingredientList;  // ingredient with weight in grams
     private String instruction;
     private int prepTime;
     private int cookTime;
@@ -106,7 +108,19 @@ public class Recipe {
         if (ingredientList.isEmpty()) {
             return 0;
         }
-        // TODO write for each look for ingredientList hashmap here
+        // TODO test that this loop works as expected
+        int total = 0;
+        for (Entry<Ingredient, Integer> ingredient : ingredientList.entrySet()) {
+            // Entry key = Ingredient object
+            int baseCalories = ingredient.getKey().getCalories();
+
+            // Entry value = weight in grams
+            int grams = ingredient.getValue();
+
+            int ingredientCalories = baseCalories * grams;
+            total += ingredientCalories;
+        }
+        return total;
     }
 
     // Methods
