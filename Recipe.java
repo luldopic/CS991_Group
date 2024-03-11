@@ -164,27 +164,4 @@ public class Recipe {
     public int totalTime() {
         return prepTime + cookTime;
     }
-
-    // Methods
-
-    /*
-    Add ingredients
-    Edit ingredients
-    Edit instructions
-    Edit cooktime
-    Edit preptime
-    Edit Name
-    Getter
-        Name
-        Cooktime
-        Preptime
-        Instructions
-        Ingredients
-     Get total nutrional value
-        calories
-        sugar
-        carbs
-        fat
-        salts
-     */
 }
