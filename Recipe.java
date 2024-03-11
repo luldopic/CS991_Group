@@ -131,6 +131,7 @@ public class Recipe {
             int grams = ingredient.getValue();
 
             // need to rework this calculation
+            // TODO ensure this calculation works properly
             int ingredientCalories = baseCalories/100 * grams;
             total += ingredientCalories;
         }
