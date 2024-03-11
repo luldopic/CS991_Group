@@ -138,6 +138,16 @@ public class Recipe {
         return total;
     }
 
+    public int ingredientCalories(Ingredient ingredient) {
+        if (!ingredientList.containsKey(ingredient)) {
+            throw new IllegalArgumentException("Ingredient not included in recipe ingredient list");
+        }
+        double caloriesPerGram = ((double) ingredient.getCalories() / 100);
+        double grams = (double) ingredientList.get(ingredient);
+
+        return (int) (caloriesPerGram * grams);
+    }
+
     public int totalTime() {
         return prepTime + cookTime;
     }
