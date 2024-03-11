@@ -122,18 +122,9 @@ public class Recipe {
         }
         // TODO test that this loop works as expected
         int total = 0;
-        for (Entry<Ingredient, Integer> ingredient : ingredientList.entrySet()) {
-            // Key = Ingredient object
-            // baseCalories = calories per 100g
-            int baseCalories = ingredient.getKey().getCalories();
-
-            // Value = weight in grams
-            int grams = ingredient.getValue();
-
-            // need to rework this calculation
-            // TODO ensure this calculation works properly
-            int ingredientCalories = baseCalories/100 * grams;
-            total += ingredientCalories;
+        for (Entry<Ingredient, Integer> entry : ingredientList.entrySet()) {
+            Ingredient ingredient = entry.getKey();
+            total += ingredientCalories(ingredient);
         }
         return total;
     }
