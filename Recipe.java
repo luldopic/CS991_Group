@@ -129,6 +129,12 @@ public class Recipe {
         return total;
     }
 
+    /**
+     * Calculates the calorie value of a particular ingredient based on the weight included.
+     *
+     * @param ingredient    ingredient to calculate the calories for
+     * @return  calories of ingredient according to its weight
+     */
     public int ingredientCalories(Ingredient ingredient) {
         if (!ingredientList.containsKey(ingredient)) {
             throw new IllegalArgumentException("Ingredient not included in recipe ingredient list");
