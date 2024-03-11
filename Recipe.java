@@ -136,13 +136,29 @@ public class Recipe {
      * @return  calories of ingredient according to its weight
      */
     public int ingredientCalories(Ingredient ingredient) {
+        if (ingredient == null) {
+            throw new IllegalArgumentException("Ingredient was null");
+        }
         if (!ingredientList.containsKey(ingredient)) {
             throw new IllegalArgumentException("Ingredient not included in recipe ingredient list");
         }
+
         double caloriesPerGram = ((double) ingredient.getCalories() / 100);
-        double grams = (double) ingredientList.get(ingredient);
+        double grams = (double) ingredientGrams(ingredient);
 
         return (int) (caloriesPerGram * grams);
+    }
+
+    public int ingredientGrams(Ingredient ingredient) {
+        if (ingredient == null) {
+            throw new IllegalArgumentException("Ingredient was null");
+        }
+        if (!ingredientList.containsKey(ingredient)) {
+            throw new IllegalArgumentException("Ingredient not included in recipe ingredient list");
+        }
+
+        // this gets value of key, which is the weight in grams
+        return ingredientList.get(ingredient);
     }
 
     public int totalTime() {
