@@ -11,6 +11,14 @@ public class Recipe {
 
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public HashMap<Ingredient, Integer> getIngredientList() {
+        return ingredientList;
+    }
+
     //Method
     /*
     Add ingredients

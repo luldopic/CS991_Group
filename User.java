@@ -1,4 +1,5 @@
-import java.lang.reflect.Array;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.ArrayList;
 public class User {
     private String username;
@@ -60,8 +61,20 @@ public class User {
         this.isLoggedIn = false;
     }
 
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public void addRecipeToCookbook(Cookbook cookbook, Recipe recipe) {
-        return;
+        cookbook.addRecipe(recipe);
     }
 
     public void addRecipeToFavourite(Recipe recipe) {
@@ -74,20 +87,49 @@ public class User {
                 return cookbook;
             }
         }
+        return null;
     }
 
+    /*
+    Returns all recipes that have a partial string match with search string.
+    e.g. if the recipe name is "spinach lasagna", the method will return if the search
+    string is "lasagna".
+     */
     public ArrayList<Recipe> searchRecipeByName(String name) {
         ArrayList<Recipe> searchResult= new ArrayList<>();
-        return null;
+        Pattern pattern = Pattern.compile(name, Pattern.CASE_INSENSITIVE);
+        for (Cookbook cookbook: cookbookList) {
+            for (Recipe recipe : cookbook.getRecipeList()) {
+                Matcher matcher = pattern.matcher(recipe.getName());
+                boolean matchFound = matcher.find();
+                if(matchFound){
+                    searchResult.add(recipe);
+                }
+            }
+        }
+        return searchResult;
+    }
+
+    /*
+    Return all recipe which have a specific ingredient (in object form)
+     */
+    public ArrayList<Recipe> filterRecipeByIngredient(Ingredient ingredient) {
+        ArrayList<Recipe> searchResult= new ArrayList<>();
+        for (Cookbook cookbook: cookbookList) {
+            for (Recipe recipe : cookbook.getRecipeList()) {
+                if(recipe.getIngredientList().containsKey(ingredient)){
+                    searchResult.add(recipe);
+                }
+            }
+        }
+        return searchResult;
     }
 
     public ArrayList<Recipe> getFavourites() {
         return favourites;
     }
 
-    public ArrayList<Recipe> filterRecipeBy(String something){
-        return null;
-    }
+
 
     //Methods
     /*
