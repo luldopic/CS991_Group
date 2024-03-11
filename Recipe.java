@@ -110,6 +110,12 @@ public class Recipe {
         // So if ingredient already exists in the list, the grams value will change
     }
 
+    /**
+     * Calculates the total calories for the recipe
+     * by summing the calorie values for each ingredient by weight.
+     *
+     * @return  total calories values for all ingredients combined
+     */
     public int totalCalories() {
         if (ingredientList.isEmpty()) {
             return 0;
