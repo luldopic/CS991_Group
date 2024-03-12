@@ -1,6 +1,7 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.ArrayList;
+
 public class User {
     private String username;
     private String password;
@@ -25,7 +26,7 @@ public class User {
     /*
     Method to fetch the default cookbook from the app database to copy it to user cookbook
      */
-    public static Cookbook getDefaultCookbook(){
+    public static Cookbook getDefaultCookbook() {
         //Copy standard cookbook here (File type ? txt? SQL database?)
         return null;
     }
@@ -40,11 +41,21 @@ public class User {
         //Add details to SQL database
     }
 
+    public void changeUsername(String username) {
+        this.username = username;
+    }
+
+    public void changePassword(String oldPassword, String newPassword) {
+        if (oldPassword.equals(this.password)) {
+            this.password = newPassword;
+        }
+    }
+
     /*
     Method to check login details against saved database and login
      */
     public void login(String username, String password) {
-        if (!username.equals(this.username)){
+        if (!username.equals(this.username)) {
             throw new IllegalArgumentException("User not found");
         }
         if (!password.equals(this.password)) {
@@ -83,7 +94,7 @@ public class User {
 
     public Cookbook getCookbook(String name) {
         for (Cookbook cookbook : cookbookList) {
-            if (cookbook.getName().equals(name)){
+            if (cookbook.getName().equals(name)) {
                 return cookbook;
             }
         }
@@ -96,13 +107,13 @@ public class User {
     string is "lasagna".
      */
     public ArrayList<Recipe> searchRecipeByName(String name) {
-        ArrayList<Recipe> searchResult= new ArrayList<>();
+        ArrayList<Recipe> searchResult = new ArrayList<>();
         Pattern pattern = Pattern.compile(name, Pattern.CASE_INSENSITIVE);
-        for (Cookbook cookbook: cookbookList) {
+        for (Cookbook cookbook : cookbookList) {
             for (Recipe recipe : cookbook.getRecipeList()) {
                 Matcher matcher = pattern.matcher(recipe.getName());
                 boolean matchFound = matcher.find();
-                if(matchFound){
+                if (matchFound) {
                     searchResult.add(recipe);
                 }
             }
@@ -114,10 +125,10 @@ public class User {
     Return all recipe which have a specific ingredient (in object form)
      */
     public ArrayList<Recipe> filterRecipeByIngredient(Ingredient ingredient) {
-        ArrayList<Recipe> searchResult= new ArrayList<>();
-        for (Cookbook cookbook: cookbookList) {
+        ArrayList<Recipe> searchResult = new ArrayList<>();
+        for (Cookbook cookbook : cookbookList) {
             for (Recipe recipe : cookbook.getRecipeList()) {
-                if(recipe.getIngredientList().containsKey(ingredient)){
+                if (recipe.getIngredientList().containsKey(ingredient)) {
                     searchResult.add(recipe);
                 }
             }
@@ -128,7 +139,6 @@ public class User {
     public ArrayList<Recipe> getFavourites() {
         return favourites;
     }
-
 
 
     //Methods
