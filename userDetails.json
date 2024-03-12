@@ -1,0 +1,9 @@
+{
+  "username": "default",
+  "password": "default",
+  "accountType": "public",
+  "favourites": "",
+  "_fav_comment" : "Use favourite data field to put details of SQL table",
+  "cookbook_database": "",
+  "_cookbook_comment" : "Use cookbook database data field to put details for SQL table(s)"
+}
