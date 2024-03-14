@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
@@ -8,6 +9,7 @@ public class Recipe {
     private String instruction;
     private int prepTime;
     private int cookTime;
+    private ArrayList<String> tags;
 
     /**
      * Creates a blank recipe with a default name.
@@ -21,6 +23,7 @@ public class Recipe {
         instruction = "";
         prepTime = 0;
         cookTime = 0;
+        tags = new ArrayList<>();
     }
 
     /**
@@ -36,6 +39,7 @@ public class Recipe {
         this.instruction = original.instruction;
         this.prepTime = original.prepTime;
         this.cookTime = original.cookTime;
+        this.tags = original.tags;
     }
 
     public String getId() {
@@ -89,6 +93,23 @@ public class Recipe {
             throw new IllegalArgumentException("Time to prep cannot be below 0");
         }
         this.prepTime = prepTime;
+    }
+
+    public ArrayList<String> getTags() {
+        return tags;
+    }
+
+    public void addTag(String tag) {
+        if (tag == null || tag.isEmpty()) {
+            throw new IllegalArgumentException("Tags must not be null or an empty string");
+        }
+        if (tag.contains(",")) {
+            throw new IllegalArgumentException("Tags must not contain commas");
+        }
+        if (tags.contains(tag)) {
+            throw new IllegalArgumentException("Unable to add duplicate tags");
+        }
+        tags.add(tag);
     }
 
     /**
