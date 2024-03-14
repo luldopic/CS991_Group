@@ -99,15 +99,29 @@ public class Recipe {
         return tags;
     }
 
+    /**
+     * Adds a tag to the recipe's tags list.
+     * \n
+     * Throws exception if null value given as param.
+     * Removes commas if any from tag to add.
+     * Does nothing if tag to add is empty or if it is already in the tags list.
+     *
+     * @param tag   tag to be added to tags list
+     */
     public void addTag(String tag) {
-        if (tag == null || tag.isEmpty()) {
-            throw new IllegalArgumentException("Tags must not be null or an empty string");
+        if (tag == null) {
+            throw new IllegalArgumentException("Tag must not be null");
         }
         if (tag.contains(",")) {
-            throw new IllegalArgumentException("Tags must not contain commas");
+            tag = tag.replace(",", "");
+        }
+        if (tag.isEmpty()) {
+            // do nothing
+            return;
         }
         if (tags.contains(tag)) {
-            throw new IllegalArgumentException("Unable to add duplicate tags");
+            // do nothing
+            return;
         }
         tags.add(tag);
     }
