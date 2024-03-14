@@ -143,6 +143,9 @@ public class Recipe {
             throw new IllegalArgumentException("Ingredient not included in recipe ingredient list");
         }
 
+        if (ingredient.getCalories() == 0) {
+            return 0;
+        }
         double caloriesPerGram = ((double) ingredient.getCalories() / 100);
         double grams = (double) ingredientGrams(ingredient);
 

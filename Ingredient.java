@@ -40,6 +40,9 @@ public class Ingredient {
     }
 
     public void setCalories(int calories) {
+        if (calories < 0) {
+            throw new IllegalArgumentException("Calories for ingredient cannot be below 0");
+        }
         this.calories = calories;
     }
 }
