@@ -1,5 +1,4 @@
 public class Ingredient {
-    private String id;
     private String name;
     private String type;    // e.g. meat, fish, veg, fruit, grain, dairy?
     private int calories;   // calories per 100g of ingredient
