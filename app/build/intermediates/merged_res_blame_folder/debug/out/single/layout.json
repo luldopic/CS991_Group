@@ -8,10 +8,6 @@
         "source": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-main-46:\\layout\\dialog_add_ingredient.xml"
     },
     {
-        "merged": "com.example.recipe.app-mergeDebugResources-43:/layout/activity_edit_recipe.xml",
-        "source": "com.example.recipe.app-main-46:/layout/activity_edit_recipe.xml"
-    },
-    {
         "merged": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-mergeDebugResources-43:\\layout\\activity_recipe_details.xml",
         "source": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-main-46:\\layout\\activity_recipe_details.xml"
     },
@@ -20,12 +16,24 @@
         "source": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-main-46:\\layout\\activity_add_recipe.xml"
     },
     {
+        "merged": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-mergeDebugResources-43:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-main-46:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-mergeDebugResources-43:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-main-46:\\layout\\activity_login.xml"
+    },
+    {
         "merged": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-mergeDebugResources-43:\\layout\\activity_view_recipe.xml",
         "source": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-main-46:\\layout\\activity_view_recipe.xml"
     },
     {
         "merged": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-mergeDebugResources-43:\\layout\\activity_edit_recipe.xml",
         "source": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-main-46:\\layout\\activity_edit_recipe.xml"
+    },
+    {
+        "merged": "com.example.recipe.app-mergeDebugResources-43:/layout/activity_register.xml",
+        "source": "com.example.recipe.app-main-46:/layout/activity_register.xml"
     },
     {
         "merged": "C:\\Users\\pc\\.gradle\\daemon\\8.2\\com.example.recipe.app-mergeDebugResources-43:\\layout\\dialog_add_step.xml",

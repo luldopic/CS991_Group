@@ -15,12 +15,22 @@
           <theme>@style/Theme.Recipe</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+        <config>
+          <theme>@style/Theme.Recipe</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
         <config>
           <theme>@style/Theme.Recipe</theme>
         </config>
       </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_recipe_details.xml">
+        <config>
+          <theme>@style/Theme.Recipe</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml">
         <config>
           <theme>@style/Theme.Recipe</theme>
         </config>
@@ -86,14 +96,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "ScreenRecorder.SavePath": "C:\\Users\\pc",
     "android-custom-viewC:/Users/pc/AppData/Local/Android/Sdk/sources/android-34/android/view/ViewGroup.java_SELECTED": "ViewGroup",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/Users/pc/AndroidStudioProjects/recipe",
+    "last_opened_file_path": "C:/Users/pc",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "settings.editor.selected.configurable": "configurable.group.editor"
   }
 }]]></component>
   <component name="PsdUISettings">
@@ -108,6 +119,10 @@
     </key>
     <key name="android.template.-852709087">
       <recent name="com.example.recipe" />
+    </key>
+    <key name="android.template.1455162122">
+      <recent name="com.example.recipe" />
+      <recent name="com.example.recipe.model" />
     </key>
   </component>
   <component name="RunManager">

@@ -40,11 +40,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void signIn() {
-
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     public void register() {
-
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 
     public void initializeIngredients(){

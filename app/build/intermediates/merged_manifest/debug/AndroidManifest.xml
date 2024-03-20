@@ -28,6 +28,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Recipe" >
         <activity
+            android:name="com.example.recipe.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.recipe.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.recipe.AddRecipeActivity"
             android:exported="false" />
         <activity

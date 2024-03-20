@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <!-- Ingredient fields will be added here dynamically -->
+
         </LinearLayout>
 
         <LinearLayout
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <!-- Ingredient fields will be added here dynamically -->
+
         </LinearLayout>
 
         <LinearLayout
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <!-- Ingredient fields will be added here dynamically -->
+
         </LinearLayout>
 
         <LinearLayout
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <!-- Ingredient fields will be added here dynamically -->
+
         </LinearLayout>
 
         <LinearLayout
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
-            <!-- Ingredient fields will be added here dynamically -->
+
         </LinearLayout>
 
     </LinearLayout>

@@ -7,6 +7,8 @@ dimen activity_vertical_margin
 dimen fab_margin
 dimen nav_header_height
 dimen nav_header_vertical_spacing
+drawable background
+drawable background_light
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_menu_camera
@@ -18,7 +20,10 @@ id add_ingredient_button_layout
 id add_steps_button_layout
 id backButton
 id editButton
+id editTextText
 id edit_recipe_layout
+id emailInput
+id forgotPasswordText
 id ingredients_layout
 id ingredients_title_layout
 id mobile_navigation
@@ -27,6 +32,7 @@ id name_desc_layout
 id nav_gallery
 id nav_home
 id nav_slideshow
+id passwordInput
 id quantity
 id recipeDescriptionTextView
 id recipeDetailsLayout
@@ -37,6 +43,7 @@ id recipes_container
 id register_button
 id save_button_layout
 id scrollView
+id signInButton
 id sign_in_button
 id step
 id steps_layout
@@ -44,8 +51,10 @@ id steps_title_layout
 id view_recipe_button
 layout activity_add_recipe
 layout activity_edit_recipe
+layout activity_login
 layout activity_main
 layout activity_recipe_details
+layout activity_register
 layout activity_view_recipe
 layout dialog_add_ingredient
 layout dialog_add_step
